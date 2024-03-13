@@ -1,0 +1,21 @@
+@mixin app-styles {
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 500px) {
+    align-items: baseline;
+    padding-top: 2rem;
+  }
+}
+
+%app-common {
+  @include app-styles;
+}
+
+.App {
+  @extend %app-common;
+}

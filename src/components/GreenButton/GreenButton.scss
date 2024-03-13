@@ -1,0 +1,26 @@
+@mixin button-styles {
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+%button-common {
+  @include button-styles;
+}
+
+.green_btn {
+  @extend %button-common;
+}
+
+.enabled_green {
+  @extend %button-common;
+  background-color: #8AA838;
+}
+
+.disabled_grey {
+  @extend %button-common;
+  background-color: grey;
+}

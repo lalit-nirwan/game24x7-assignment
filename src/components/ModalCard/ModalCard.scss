@@ -1,0 +1,104 @@
+$primary-color: #4091F0;
+$secondary-color: #747474;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%form-group-style {
+  padding: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.modal-card {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.lock_icon {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+.card_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pan_heading {
+  margin: 0;
+}
+
+.disclaimer_grey_txt {
+  font-size: 12px;
+  color: $secondary-color;
+  margin-top: 0.25rem;
+}
+
+.card_header_left {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.card_content {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+.pan_image {
+  width: 100%;
+}
+
+.input_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.close_btn {
+  border: none;
+  background-color: transparent;
+  margin-top: -1.5rem;
+  margin-right: -0.5rem;
+  cursor: pointer;
+}
+
+.form-group {
+  @extend %form-group-style;
+  > label {
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    font-size: 10px;
+    background-color: white;
+    color: $primary-color;
+  }
+  > input {
+    border: none;
+    outline: none;
+  }
+}
+
+.input_count {
+  display: flex;
+  justify-content: right;
+  font-size: 12px;
+  color: $secondary-color;
+  padding-top: 0.5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .card_content {
+    flex-direction: column;
+  }
+}

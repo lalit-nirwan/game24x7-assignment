@@ -1,0 +1,42 @@
+@mixin common-styles {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin font-styles {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin code-styles {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+%common-styles {
+  @include common-styles;
+}
+
+%font-styles {
+  @include font-styles;
+}
+
+%code-styles {
+  @include code-styles;
+}
+
+body {
+  margin: 0;
+  @extend %common-styles;
+  @extend %font-styles;
+}
+
+html, #root {
+  @extend %common-styles;
+}
+
+code {
+  @extend %code-styles;
+}
